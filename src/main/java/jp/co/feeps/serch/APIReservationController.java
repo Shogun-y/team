@@ -13,10 +13,10 @@ public class APIReservationController<T> {
     @Autowired
     private ReservationService reservationService;
     
-    
+    //引数のSearchModelにパラメータを格納してる
 	@RequestMapping(path = "/reservation/search/result", method = RequestMethod.GET)
 	public  List<T> searchResult(SearchModel target) {
-		return (List<T>)reservationService.getSearchReservations(target);
+		return (List<T>)reservationService.getSearchReservations(target); 
 		
 		
 		

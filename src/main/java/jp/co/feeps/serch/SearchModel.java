@@ -1,24 +1,26 @@
 package jp.co.feeps.serch;
 
 
-
+//検索条件の受け渡しに使う
+//数字はint型ではなくInteger型にしないといけない
+//Integer型はnullを表現できる(実際に検索を行うServiceで使用)
 public class SearchModel {
 
 
 	
-	private int id;
+	private Integer id;
 
 	private String name;
 
-	private int age;
+	private Integer age;
 
 	private String live;
 	
 	
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -27,10 +29,10 @@ public class SearchModel {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getAge() {
+	public Integer getAge() {
 		return age;
 	}
-	public void setAge(int age) {
+	public void setAge(Integer age) {
 		this.age = age;
 	}
 	public String getLive() {
