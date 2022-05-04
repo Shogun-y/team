@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  
+</head>
+<body>
+ 
+    <h2>検索ページ</h2>
+    <div>
+        <h3>検索</h3>
+        <form th:action="@{/reservation/search/result}" method="get" th:object="${target}" name="search_box">
+   
+            
+                    <span>ID</span><br>
+                    <input type="text" th:field="*{id}" />
+                    
+         
+                           
+               <br>
+                    <span>名前</span><br>
+                    <input type="text" th:field="*{name}" />
+                    
+           
+                         <br>
+                    <span class="search_item">年齢</span><br>
+                    <input type="text" th:field="*{age}" />
+                    
+        
+                           <br>
+                    <span class="search_item">住み</span><br>
+                    <input type="text" th:field="*{live}" />
+                    
+              
+       <br>
+               
+                <button type="submit"> 検索</button>
+
+                
+          
+        </form>
+    </div>
+</body>

@@ -1,0 +1,18 @@
+<!doctype html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+
+  <title>ユーザー登録</title>
+</head>
+<body>
+	<form action"spring-practice/UserRegist" method="post" 
+	th:object="${userForm}">
+	名前 
+	<input type="text"  th:field="*{name"/>
+	<input type="submit" value="登録"/>
+	</form>
+</body>
+
+</html>

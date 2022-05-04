@@ -1,0 +1,26 @@
+<!doctype html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+
+  <title>商品一覧</title>
+</head>
+<body>
+	<table>
+	<tr>
+	<th>商品名</th>
+	</tr>
+	<tr th:each="item:${session.itemList}">
+	<td th:text="${item}">
+	</td></tr>
+	</table>
+	<form action"spring-practice/itemAdd" method="post">
+	<input type="text" name="item"/>
+	<input type="submit" value="追加登録"/>
+	</form>
+	
+	
+</body>
+
+</html>
